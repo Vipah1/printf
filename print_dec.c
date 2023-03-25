@@ -1,14 +1,15 @@
 #include "main.h"
 
 /**
- * print_int - prints integers
+ * print_dec - prints decimal
  * @vl: variadic list
- * Return: output lenght
+ * Return: lenght of the number
  */
 
-int print_int(va_list vl)
+int print_dec(va_list vl)
 {
-	int i, d, n, N;
+	//the same as print_int
+	int n, N, i, d;
 	int counter = 0, len = 0, pt = 1;
 
 	n = va_arg(vl, int);
@@ -26,28 +27,23 @@ int print_int(va_list vl)
 			counter++;
 		}
 
-		N = n; //to not destroy n
+		N = n;
 		while (N != 0)
 		{
-			N = N / 10;
-			len++; //will get us the N lenght
+			N /= 10;
+			len++;
 		}
 
 		for (i = 1; i < len; i++)
-			pt *= 10; // will use it to get the digits of n
-
+			pt *= 10;
 		for (i = 1; i < len + 1; i++)
 		{
 			d = n / pt;
-
 			if (n < 0)
 				_putchar((-1 * d) + 48);
-			else
-				_putchar(d + '0');
-
 			counter++;
 			n -= d * pt;
-			pt = pt / 10;
+			pt /= 10;
 		}
 	}
 	return (counter);
