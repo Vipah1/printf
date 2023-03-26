@@ -1,5 +1,5 @@
-#ifndef PRINTF_H
-#define PRINTF_H
+#ifndef _MAIN_H
+#define _MAIN_H
 
 #include <stdarg.h>
 #include <stdio.h>
@@ -7,6 +7,7 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int (*check_specifier(const char *format))(va_list);
 int print_percentage(void);
 int print_char(va_list vl);
 int print_str(va_list vl);
