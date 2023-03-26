@@ -2,7 +2,7 @@
 
 /**
  * print_percentage - prints %%
- * 
+ *
  * Return: 1
  */
 
