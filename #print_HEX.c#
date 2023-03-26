@@ -35,7 +35,7 @@ _putchar('0' + d);
 else
 _putchar(d + '0' + HEX);
 counter++;
-n -= d *e;
+n -= d * e;
 e /= 16;
 }
 }

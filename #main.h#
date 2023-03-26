@@ -1,5 +1,5 @@
-#ifndef PRINTF_H
-#define PRINTF_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdarg.h>
 #include <stdio.h>
@@ -25,8 +25,8 @@ int print_HEX(va_list vl);
  */
 typedef struct format
 {
-	char *s;
-	int (*f)(va_list);
+char *s;
+int (*f)(va_list);
 } conver_specifier;
 
 #endif
