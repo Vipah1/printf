@@ -4,7 +4,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <unistd.h>
 int _putchar(char c);
 int _printf(const char *format, ...);
 int (*check_specifier(const char *format))(va_list);
@@ -20,14 +20,14 @@ int print_hex(va_list vl);
 int print_HEX(va_list vl);
 
 /**
- * struct format - finds the right specifier
+ * struct func - finds the right specifier
  * @s: the specifier
  * @f: function associated to s
  */
-typedef struct format
+typedef struct func
 {
 	char *s;
 	int (*f)(va_list);
-} conver_specifier;
+} func_s;
 
 #endif
