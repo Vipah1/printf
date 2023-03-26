@@ -14,9 +14,9 @@ int _printf(const char *format, ...)
 int i = 0; /* format index */
 int count = 0; /* the number of characters write returns at the end */
 int value = 0; /* holds the return value (number of characters)  of write */
+int (*f)(va_list);
 va_list vl; /* variadic arguments for printf extra arguments */
 va_start(vl, format);
-int (*f)(va_list);
 
 /* This prevents parsing a null pointer */
 if (format == NULL)
