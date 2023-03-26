@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+
 int _putchar(char c);
 int _printf(const char *format, ...);
 int (*check_specifier(const char *format))(va_list);
@@ -18,6 +19,7 @@ int print_u_i(va_list vl);
 int print_oct(va_list vl);
 int print_hex(va_list vl);
 int print_HEX(va_list vl);
+int print_adr(va_list vl);
 
 /**
  * struct func - finds the right specifier
