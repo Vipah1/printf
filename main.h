@@ -12,7 +12,9 @@ int print_char(va_list vl);
 int print_str(va_list vl);
 int print_int(va_list vl);
 int print_dec(va_list vl);
-
+int print_bin(va_list vl);
+int print_u_i(va_list vl);
+int print_oct(va_list vl);
 
 /**
  * struct format - finds the right specifier
