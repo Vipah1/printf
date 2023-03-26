@@ -2,7 +2,7 @@
 
 /**
  * print_str - prints string
- * vl: variadic list
+ * @vl: variadic list
  * Return: 1
  */
 
