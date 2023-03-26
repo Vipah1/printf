@@ -6,8 +6,9 @@
  * Return: 1
  */
 
-int print_cent(void)
+int print_cent(va_list vl)
 {
-	_putchar('%');
-	return (1);
+  void(vl);
+  _putchar('%');
+  return (1);
 }
