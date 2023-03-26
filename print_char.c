@@ -1,11 +1,9 @@
 #include "main.h"
-
 /**
  * print_char - prints char
  * @vl: variadic list
  * Return: 1
  */
-
 int print_char(va_list vl)
 {
 char c;
