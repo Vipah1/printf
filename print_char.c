@@ -2,7 +2,7 @@
 
 /**
  * print_char - prints char
- * vl: variadic list
+ * @vl: variadic list
  * Return: 1
  */
 
