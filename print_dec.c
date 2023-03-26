@@ -8,7 +8,7 @@
 
 int print_dec(va_list vl)
 {
-	//the same as print_int
+	/*the same as print_int*/
 	int n, N, i, d;
 	int counter = 0, len = 0, pt = 1;
 
