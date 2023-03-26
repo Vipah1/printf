@@ -15,6 +15,8 @@ int print_dec(va_list vl);
 int print_bin(va_list vl);
 int print_u_i(va_list vl);
 int print_oct(va_list vl);
+int print_hex(va_list vl);
+int print_HEX(va_list vl);
 
 /**
  * struct format - finds the right specifier
