@@ -8,7 +8,7 @@
 int _putchar(char c);
 int _printf(const char *format, ...);
 int (*check_specifier(const char *format))(va_list);
-int print_percentage(void);
+int print_cent(void);
 int print_char(va_list vl);
 int print_str(va_list vl);
 int print_int(va_list vl);
