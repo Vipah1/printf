@@ -11,7 +11,7 @@ int convert_hex(unsigned int x);
 int print_adr(va_list vl)
 {
   void *p;
-  unsigned int a, ha; /*will use to convert to hexadicimal (output)*/
+  unsigned long int a, ha; /*will use to convert to hexadicimal (output)*/
   int i;
   char *nil = "(nil)"; /*if p null*/
 
@@ -23,7 +23,7 @@ int print_adr(va_list vl)
       return (i); /*nil lenght*/
     }
 
-  a = (unsigned int)p;
+  a = (unsigned long int)p;
   _putchar('0');
   _putchar('x');
   ha = convert_hex(a);
@@ -36,11 +36,10 @@ int print_adr(va_list vl)
  * Return: the lenght of the output
  */
 
-int convert_hex(unsigned int x)
+int convert_hex(unsigned long int x)
 {
-  unsigned int *arr;
-  int i;
-  unsigned int len = 0, n = x;
+  unsigned long int *arr;
+  unsigned long int i, len = 0, n = x;
 
   while (n != 0)
     {
@@ -48,7 +47,7 @@ int convert_hex(unsigned int x)
       len++;
     }
 
-  arr = malloc(sizeof(unsigned int) * len);
+  arr = malloc(sizeof(unsigned long int) * len);
   for (i = 0; i < len; i++)
     {
       arr[i] = x % 16;
