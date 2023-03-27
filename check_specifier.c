@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * check_specifier - Checks for a valid character specifier and assigns a valid function.
+ * check_specifier - Checks for a valid char specifier and assigns valid func
  * @format: The type of specifier (char*)
  * Return: Returns a pointer to a function if success
  * NULL pointer if failed

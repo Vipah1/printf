@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_percentage - prints %%
+ * print_cent - prints %%
  *
  * Return: 1
  */
