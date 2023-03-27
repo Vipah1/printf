@@ -20,6 +20,7 @@ int print_oct(va_list vl);
 int print_hex(va_list vl);
 int print_HEX(va_list vl);
 int print_adr(va_list vl);
+int print_rev(va_list vl);
 
 /**
  * struct func - finds the right specifier
