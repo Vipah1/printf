@@ -12,6 +12,8 @@ func_s my_array[4] = {
 {"c", print_char},
 {"s", print_str},
 {"%", print_cent},
+{"d", print_int},
+{"i", print_dec},
 {NULL, NULL}
 };
 for (i = 0; my_array[i].s != NULL; i++)
