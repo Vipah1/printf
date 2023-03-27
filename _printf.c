@@ -7,37 +7,42 @@
  */
 int _printf(const char *format, ...)
 {
-int i = 0; /* format index */
-int count = 0; /* the number of characters write returns at the end */
-int value = 0; /* holds the return value (number of characters)  of write */
+int i = 0;
+int count = 0;
 int (*f)(va_list);
-va_list vl; /* variadic arguments for printf extra arguments */
+va_list vl;
 va_start(vl, format);
-if (format == NULL)/* prevents null pointer*/
+if (format == NULL)
 return (-1);
-while (format[i])/* handles print */
+while (format[i])
 {
 if (format[i] != '%')
-value  = write(1, &format[i], 1);
-count = count + value;
+{
+_putchar(format[i]);
+count = count + 1;
 i++;
 continue;
+}
 if (format[i] == '%')
 {
 f = check_specifier(&format[i + 1]);
 if (f != NULL)
-value = f(vl);
-count = count + value;
+{
+count = count + f(vl);
 i = i + 2;
 continue;
+}
 if (format[i + 1] == '\0')
-break;
+return (-1);
 if (format[i + 1] != '\0')
-value = write(1, &format[i + 1], 1);
-count = count + value;
+{
+_putchar(format[i + 1]);
+count = count + 1;
 i = i + 2;
 continue;
 }
 }
+}
+va_end(vl);
 return (count);
 }

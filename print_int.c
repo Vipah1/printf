@@ -1,48 +1,34 @@
 #include "main.h"
-
 /**
- * print_int - prints integers
- * @vl: variadic list
- * Return: output lenght
+ * print_int - prints a given integer from variadic parameters
+ * @vl: variadic parameter
+ *
+ * Return: number of characters printed on Success
  */
-
 int print_int(va_list vl)
 {
-	int i, d, n, N;
-	int counter = 0, len = 0, pt = 1;
-
-	n = va_arg(vl, int);
-	if (n == 0)
-	{
-		_putchar('0');
-		return (1);
-	}
-	else
-	{
-		if (n < 0)
-		{
-			_putchar('-');
-			counter++;
-		}
-		N = n; /*to not destroy n*/
-		while (N != 0)
-		{
-			N = N / 10;
-			len++; /*will get us the N lenght*/
-		}
-		for (i = 1; i < len; i++)
-			pt *= 10; /*will use it to get the digits of n*/
-		for (i = 1; i < len + 1; i++)
-		{
-			d = n / pt;
-			if (n < 0)
-				_putchar((-1 * d) + 48);
-			else
-				_putchar(d + '0');
-			counter++;
-			n -= d * pt;
-			pt = pt / 10;
-		}
-	}
-	return (counter);
+int i = 0;
+int count = 0;
+int numb;
+int my_arr[10];
+char x[1];
+  /*Fetch integer from variadic parameters*/
+numb = va_arg(vl, int);
+  /*Break the numbers apart and assign them to array*/
+while (numb != 0)
+{
+my_arr[i] = (numb % 10);
+numb = numb / 10;
+if (numb == 0)
+break;
+else
+i++;
+}
+  /*Write the contents of the array to stdout*/
+for (i = 0; i >= 0; i--)
+{
+x[0] = ('0' + my_arr[i]); /*Convert int to char*/
+count += write(1, x, 1);
+}
+return (count);
 }

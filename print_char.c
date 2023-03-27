@@ -7,7 +7,12 @@
 int print_char(va_list vl)
 {
 char c;
-c = va_arg(vl, int);
-_putchar(c);
-return (1);
+int count = 0;
+c = (char)va_arg(vl, int);
+if (c)
+{
+count = write(1, &c, 1);
+return (count);
+}
+return (0);
 }
