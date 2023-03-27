@@ -7,6 +7,6 @@
 int print_cent(va_list vl)
 {
 (void)vl;
-write(1, '%', 1);
+write(1, "%", 1);
 return (1);
 }
