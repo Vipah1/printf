@@ -12,8 +12,8 @@ func_s my_array[7] = {
 {"c", print_char},
 {"s", print_str},
 {"%", print_cent},
-{"d", print_int},
-{"i", print_dec},
+{"d", print_dec},
+{"i", print_int},
 {"b", print_u_i},
 {NULL, NULL}
 };
