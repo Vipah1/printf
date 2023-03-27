@@ -8,12 +8,13 @@
 int (*check_specifier(const char *format))(va_list)
 {
 int i = 0;
-func_s my_array[4] = {
+func_s my_array[7] = {
 {"c", print_char},
 {"s", print_str},
 {"%", print_cent},
 {"d", print_int},
 {"i", print_dec},
+{"b", print_u_i},
 {NULL, NULL}
 };
 for (i = 0; my_array[i].s != NULL; i++)

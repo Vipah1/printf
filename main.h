@@ -28,8 +28,8 @@ int print_adr(va_list vl);
  */
 typedef struct func
 {
-	char *s;
-	int (*f)(va_list);
+char *s;
+int (*f)(va_list);
 } func_s;
 
 #endif
