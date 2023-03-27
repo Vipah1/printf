@@ -27,7 +27,7 @@ int print_adr(va_list vl)
 	_putchar('0');
 	_putchar('x');
 	ha = convert_hex(a);
-	return (b + 2); /* add 2 for 0 and x */
+	return (ha + 2); /* add 2 for 0 and x */
 }
 
 /**
