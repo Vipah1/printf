@@ -1,6 +1,6 @@
 #include "main.h"
 
-int convert_hex(unsigned int x);
+int convert_hex(unsigned long int x);
 
 /**
  * print_adr - prints the adress or pointer
@@ -39,7 +39,8 @@ int print_adr(va_list vl)
 int convert_hex(unsigned long int x)
 {
   unsigned long int *arr;
-  unsigned long int i, len = 0, n = x;
+  unsigned long int n = x;
+  long int i, len = 0;
 
   while (n != 0)
     {
